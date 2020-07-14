@@ -31,9 +31,7 @@ for line in refindal:
                 try:
                     chrome.get(chrome.find_element_by_xpath(
                         "/html/body/div[1]/div[7]/div[1]/div/div[3]/div/div[3]/div/a[1]").get_attribute("href"))
-                    chrome.get(chrome.find_element_by_xpath(
-                        "/html/body/div[1]/div[7]/div[3]/div[1]/div[2]/div/div[2]/div[2]/div[3]/div[1]/a").get_attribute(
-                        "href"))
+                    chrome.get(chrome.current_url + "/games/?tab=all")
                     time.sleep(2)
                     open("doğruhesaplarsteamchecker.txt", "a").writelines("{" + "\n")
                     for gametext in chrome.find_elements_by_class_name("gameListRowItemName"):
